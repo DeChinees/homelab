@@ -16,6 +16,8 @@ services:
 
       - INFLUXDB_ADMIN_USER=xxx
       - INFLUXDB_ADMIN_PASSWORD=xxx 
+networks:
+  bridge:
 volumes:
   influxdb-volume:
     external: true
