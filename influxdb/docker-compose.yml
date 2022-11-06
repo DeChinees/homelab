@@ -1,0 +1,21 @@
+services:
+  influxdb:
+    image: influxdb
+    container_name: influxdb
+    restart: always
+    ports:
+      - 8086:8086
+    networks:
+      - bridge
+    volumes:
+      - influxdb-data:/vol01/Docker/monitoring
+    environment:
+      - INFLUXDB_DB=telegraf
+      - INFLUXDB_USER=telegraf
+      - INFLUXDB_ADMIN_ENABLED=true
+
+      - INFLUXDB_ADMIN_USER=xxx
+      - INFLUXDB_ADMIN_PASSWORD=xxx 
+volumes:
+  influxdb-volume:
+    external: true
