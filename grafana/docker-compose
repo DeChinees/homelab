@@ -10,7 +10,7 @@ services:
     networks:
       - monitoring
     volumes:
-      - grafana-data:/vol01/Docker/monitoring
+      - grafana_data:/vol01/Docker/monitoring
 networks:
   bridge:
 volumes:
