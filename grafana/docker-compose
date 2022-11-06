@@ -14,5 +14,5 @@ services:
 networks:
   bridge:
 volumes:
-  grafana-volume:
+  grafana_data:
     external: true
